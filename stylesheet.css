@@ -11,6 +11,16 @@ p {
   height: 90px;
 }
 
+.header-logo {
+  font-size: 36px;
+  float: left;
+}
+
+/*.header-list {*/
+/*    */
+
+/*}*/
+
 .main  {
   background-color: #bdf7f1;
   height:600px;
@@ -20,3 +30,4 @@ p {
   background-color: #ceccf3;
   height: 270px;
 }
+
