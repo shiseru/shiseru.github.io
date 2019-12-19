@@ -1,95 +1,520 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progate</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-        </div>
-        <!-- ここにメニューアイコンを追加してください -->
-        <span class="fa fa-bars menu-icon"></span>
+<!doctype html>
+<html lang="en">
 
-        <div class="header-right">
-          <a href="#">レッスン</a>
-          <a href="#">新規登録</a>
-          <a href="#" class="login">ログイン</a>
-        </div>
-      </div>
-    </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>LEARN TO CODE.</h1>
-        <h1>LEARN TO BE CREATIVE.</h1>
-        <p>Progateはオンラインプログラミング学習サービスです。</p>
-        <p>初心者にもやさしいスライドとレッスンで、Webサービスを作りながらプログラミングを学んでいきましょう。</p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn signup">新規登録はこちら</a>
-          <p>or</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <title>shiseru</title>
+    <style>
+        <!--@charset 'utf-8';
+        body,
+        div,
+        section,
+        p {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            color: #333;
+            font-size: 14px;
+            margin: 0;
+            padding: 0
+        }
+
+        a,
+        a:hover,
+        a:active,
+        a:visited {
+            text-decoration: none;
+            color: #676767
+        }
+
+        h1 {
+            font-size: 42px;
+            text-align: center
+        }
+
+        h2 {
+            font-size: 28px
+        }
+
+        td {
+            vertical-align: top;
+            padding: 5px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box
+        }
+
+        li {
+            list-style: none
+        }
+
+        .w100 {
+            width: 100px
+        }
+
+        .w150 {
+            width: 150px
+        }
+
+        .wMax {
+            width: 100%
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .transparent {
+            opacity: 0;
+            pointer-events: none;
+            height: 0!important;
+            overflow: hidden
+        }
+
+        .textRight {
+            text-align: right
+        }
+
+        .textCenter {
+            text-align: center
+        }
+
+        .underline {
+            text-decoration: underline
+        }
+
+        .linkUnderline a {
+            text-decoration: underline
+        }
+
+        .blick {
+            display: block
+        }
+
+        .small {
+            font-size: 80%
+        }
+
+        .col2 li {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box
+        }
+
+        .col3 li {
+            float: left;
+            width: 33%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box
+        }
+
+        .col3:after,
+        .col2:after {
+            display: block;
+            width: 0;
+            height: 0;
+            content: "";
+            clear: both
+        }
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            height: 100%;
+            display: box;
+            display: -webkit-box;
+            display: -moz-box;
+            box-align: center;
+            -Webkit-box-align: center;
+            -Moz-box-align: center
+        }
+
+        .navigation li {
+            list-style: none;
+            padding: 10px
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-left: 200px;
+            padding-right: 200px;
+            transition: opacity 1s ease;
+            -webkit-transition: opacity 1s ease;
+            -moz-transition: opacity 1s ease;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box
+        }
+
+        .page article {
+            padding: 40px 0
+        }
+
+        .page .body {
+            padding-left: 50px
+        }
+
+        .page .snsLinks {
+            line-height: 1.7
+        }
+
+        .articleList img {
+            max-width: 100%
+        }
+
+        .articleList h3 {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 5px 0
+        }
+
+        .fullScreen {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        #topCanvas {
+            display: block;
+            width: 980px;
+            height: 600px
+        }
+
+        .commingSoon {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: #676767;
+            font-family: Arial;
+            font-style: italic
+        }
+
+        .message {
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="frame">
+
+        <!-- navigation -->
+        <section id="navi" class="navigation">
+            <ul>
+                <li><a data-event="togglePage" href="#top">- Top</a></li>
+                <li><a data-event="togglePage" href="#about">- About</a></li>
+                <li><a data-event="togglePage" href="#contact">- Contact</a></li>
+            </ul>
+        </section>
+
+        <!-- top page -->
+        <section id="top" class="page fullScreen">
+            <canvas id="topCanvas"></canvas>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="page transparent">
+            <h1>About</h1>
+
+            <div class="message">
+                <div>
+                    <p>
+                        After graduating from Japanese junior high school, studied abroad in Shanghai China for a year, and transferred to Canadian International high school. Currently, pursuing Computer Science degree in University of Toronto, St George Campus.
+                    </p>
+                </div>
+
+                <br>
+                <br>
+                <div>
+                    SNS : <a class="underline" href="https://github.com/shiseru" target="_blank">Github</a>,&nbsp; / <a class="underline" href="http://twitter.com/shiseru2" target="_blank">Twitter</a>,&nbsp; / <a class="underline" href="http://www.linkedin.com/in/shisei-naka-299613150" target="_blank">LinkedIn</a>,&nbsp;
+                </div>
+            </div>
+
+            <article>
+                <h2>Education</h2>
+                <div class="body">
+
+                    <table class="wMax">
+                        <tr>
+                            <td class="w100">class of 2021</td>
+                            <td>University of Toronto - Specialist in Computer Science, Double Minors in Statistics and Mathematics</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </article>
+
+
+            <article>
+                <h2>My History</h2>
+                <div class="body">
+
+                    <table class="wMax">
+                        <tr>
+                            <td class="w100">2019/8</td>
+                            <td>Boston Consulting Group- Summer Internship</td>
+                        </tr>
+                        <tr>
+                            <td class="lh15">2019/8</td>
+                            <td>leverages - business development internship</td>
+                        </tr>
+                        <tr>
+                            <td class="lh15">2019/7</td>
+                            <td>PwC Japan - Summer Internship</td>
+                        </tr>
+                        <tr>
+                            <td class="lh15">2019/1</td>
+                            <td>
+                                <p>NewsPicks - Machine learning Engineer internship</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lh15">2018/6</td>
+                            <td>
+                                <p>Folio - Data Analyst Internship</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lh15">2017/7</td>
+                            <td>
+                                <p>CS Academy - Founder</p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </article>
+
+            <article>
+                <h2>Awards</h2>
+                <div class="body">
+                    <table class="wMax linkUnderline">
+                        <tr>
+                            <td class="w100">2019/6</td>
+                            <td>
+                                <p>
+                                    Algorithm Prize - Jane Street Electronic Trading Challenge
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w100">2018/5</td>
+                            <td>
+                                <p>
+                                    4th place - 2018 ASA DataFest @ University of Toronto
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="page transparent">
+            <h1>Contact</h1>
+
+            <article class="textCenter wMax">
+                looking forward to having any contact
+                <br>
+                <br/>nathaniel.naka@gmail.com
+                <br/>
+            </article>
+        </section>
+
     </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Learn Where to Get Started!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
-            </div>
-            <p class="text-contents">Webページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
-            </div>
-            <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
-            </div>
-            <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
-            </div>
-            <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-          <h3>Let's learn to code, learn to be creative!</h3>
-        </div>
-        <span class="btn message">さっそく開発する</span>
-      </div>
-    </div>
-    <footer>
-      <div class="container">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Learn to code, learn to be creative.</p>
-      </div>
-    </footer>
-  </body>
+
+    <script>
+        window.console.debug = function() {};
+        window.yoheim = {}, window.yoheim.onloadEvents = [], window.yoheim.utility = {}, window.yoheim.startTopAnimation = function() {}, window.yoheim.stopTopAnimation = function() {},
+            function() {
+                var a = window.yoheim.utility,
+                    b = function() {
+                        document.removeEventListener("DOMContentLoaded", b, !1), window.removeEventListener("load", b, !1);
+                        for (var a = window.yoheim.onloadEvents, c = 0; c < a.length; c++) a[c]()
+                    };
+                document.addEventListener("DOMContentLoaded", b, !1), window.addEventListener("load", b, !1), a.hasContain = function(a, b) {
+                    if (!a || !b) return !1;
+                    for (var c = 0; c < a.length; c++)
+                        if (a[c] === b) return !0;
+                    return !1
+                }, a.trim = function(a) {
+                    if (!a || !a.lastIndexOf || !a.indexOf) return a;
+                    for (;;) {
+                        if (0 !== a.indexOf(" ")) break;
+                        a = a.substring(1, a.length)
+                    }
+                    for (;;) {
+                        if (a.lastIndexOf(" ") !== a.length - 1) break;
+                        a = a.substring(0, a.length - 1)
+                    }
+                    return a
+                }, a.addClass = function(b, c) {
+                    var d = b;
+                    void 0 === b.length && void 0 === b.item && (d = [b]);
+                    for (var e = 0; e < d.length; e++)
+                        for (var f = d[e], g = f.className.split(" "), h = c.split(" "), i = 0; i < h.length; i++) {
+                            var j = h[i];
+                            a.hasContain(g, j) === !1 && (f.className += " " + j)
+                        }
+                }, a.removeClass = function(b, c) {
+                    var d = b;
+                    void 0 === b.length && void 0 === b.item && (d = [b]);
+                    for (var e = 0; e < d.length; e++)
+                        for (var f = d[e], g = c.split(" "), h = 0; h < g.length; h++) {
+                            var i = g[h];
+                            f.className = a.trim(f.className.replace(i, ""))
+                        }
+                };
+                var c = document.querySelectorAll(".page");
+                a.toPage = function(b) {
+                    var d = document.getElementById(b);
+                    console.debug("targetPage: ", b), d && (a.addClass(c, "transparent"), a.removeClass(d, "transparent"), "top" === b ? window.yoheim.startTopAnimation() : window.yoheim.stopTopAnimation())
+                }
+            }();
+        ! function() {
+            var a, b, c, d, e, f = 25,
+                g = .9,
+                h = 0,
+                i = .1,
+                j = "40px Arial",
+                k = "Hi, I'm shiseru",
+                l = Math.floor,
+                m = !1,
+                n = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame,
+                o = n || window.setTimeout,
+                p = function() {
+                    m = !1, a = document.getElementById("topCanvas"), b = a.getContext("2d");
+                    var e = document.documentElement.clientWidth,
+                        f = document.documentElement.clientHeight;
+                    a.style.width = e + "px", a.style.height = f + "px", c = a.width = e, d = a.height = f, q(k), a.onmousemove = y, a.ontouchstart = A, a.ontouchmove = B, a.ontouchend = C, window.onresize = z, window.onorientationchange = z, r()
+                },
+                q = function(a) {
+                    b.font = j, b.textAlign = "center", b.fillText(a, 0, 0);
+                    var f = b.getImageData(0, 0, c, d),
+                        g = f.data;
+                    console.debug("data.length: ", g.length);
+                    for (var h = 0, i = -1, k = 0, m = g.length; m > k; k += 4) {
+                        var n = (g[k], g[k + 1], g[k + 2], g[k + 3]);
+                        if (n > 0) {
+                            var o = l(k / 4 / c);
+                            o > i && (i = o, h++)
+                        }
+                    }
+                    console.debug("textHeight: ", h), b.clearRect(0, 0, c, d), b.fillText(a, c / 2, l((d - h) / 2));
+                    for (var f = b.getImageData(0, 0, c, d), g = f.data, p = [], k = 0, m = g.length; m > k; k += 4) {
+                        var n = (g[k], g[k + 1], g[k + 2], g[k + 3]);
+                        if (n > 0) {
+                            var q = l(k / 4 % c),
+                                o = l(k / 4 / c);
+                            p.push(new x(q, o, 1, 1, n / 255))
+                        }
+                    }
+                    console.debug("points.length: ", p.length), e = new w(p), b.clearRect(0, 0, c, d), e.draw()
+                },
+                r = function() {
+                    m || (t(), u(), o(r, 1e3 / f))
+                },
+                s = function() {
+                    m = !0
+                },
+                t = function() {
+                    b.clearRect(0, 0, c, d), e && e.draw()
+                },
+                u = function() {
+                    e && e.update()
+                },
+                v = function(a, b, c) {
+                    this.x = a, this.y = b, this.z = c || 1
+                },
+                w = function(a) {
+                    this.points = a, this.mousePos = void 0, this.update = function() {
+                        if (void 0 !== this.mousePos)
+                            for (var b = 0, c = this.points.length; c > b; b++) {
+                                var d = a[b],
+                                    e = this.mousePos.x - d.curPos.x,
+                                    f = this.mousePos.y - d.curPos.y,
+                                    g = e * e + f * f,
+                                    h = Math.sqrt(g);
+                                100 > h ? (d.targetPos.x = d.curPos.x - e, d.targetPos.y = d.curPos.y - f) : (d.targetPos.x = d.orgnPos.x, d.targetPos.y = d.orgnPos.y), d.update()
+                            }
+                    }, this.draw = function() {
+                        for (var a = 0, b = this.points.length; b > a; a++) this.points[a].draw()
+                    }
+                },
+                x = function(a, c, d, e, f) {
+                    this.orgnPos = new v(a, c, d), this.curPos = new v(a, c, d), this.targetPos = new v(a, c, d), this.radius = e, this.size = e, this.friction = g, this.rotationForce = h, this.springStrength = i, this.velocity = new v(0, 0, 0), f = void 0 === f ? 1 : f, this.color = "rgba(50,50,50," + f + ")", this.update = function() {
+                        var a = this.targetPos.x - this.curPos.x,
+                            b = this.targetPos.y - this.curPos.y,
+                            c = a * this.springStrength - this.rotationForce * b,
+                            d = b * this.springStrength - this.rotationForce * a;
+                        this.velocity.x += c, this.velocity.x *= this.friction, this.curPos.x += this.velocity.x, this.velocity.y += d, this.velocity.y *= this.friction, this.curPos.y += this.velocity.y;
+                        var e = this.orgnPos.x - this.curPos.x,
+                            f = this.orgnPos.y - this.curPos.y,
+                            g = e * e + f * f,
+                            h = Math.sqrt(g);
+                        this.targetPos.z = h / 30 + 1;
+                        var i = this.targetPos.z - this.curPos.z,
+                            j = i * this.springStrength;
+                        this.velocity.z += j, this.velocity.z *= this.friction, this.curPos.z = this.velocity.z, this.radius = this.size * this.curPos.z, this.radius < 1 && (this.radius = 1)
+                    }, this.draw = function() {
+                        b.fillStyle = this.color, b.beginPath(), b.arc(this.curPos.x, this.curPos.y, this.radius, 0, 2 * Math.PI), b.fill()
+                    }
+                },
+                y = function(a) {
+                    e.mousePos = new v(a.offsetX, a.offsetY)
+                },
+                z = function() {
+                    e = null, p()
+                },
+                A = function(a) {
+                    a.preventDefault()
+                },
+                B = function(a) {
+                    a.preventDefault(), e.mousePos = new v(a.targetTouches[0].pageX, a.targetTouches[0].pageY)
+                },
+                C = function(a) {
+                    a.preventDefault(), e.mousePos = new v(0, 0)
+                };
+            p(), window.yoheim.onloadEvents.push(p), window.yoheim.startTopAnimation = p, window.yoheim.stopTopAnimation = s
+        }();
+        ! function() {
+            var a = window.yoheim.utility,
+                b = function() {
+                    for (var b = document.querySelectorAll('[data-event="togglePage"]'), c = 0; c < b.length; c++) b[c].addEventListener("click", function() {
+                        var b = this.getAttribute("href").replace("#", "");
+                        a.toPage(b)
+                    });
+                    var d = window.location.hash.replace("#", "");
+                    a.toPage(d);
+                    for (var e = document.querySelectorAll("img[data-src]"), c = 0; c < e.length; c++) {
+                        var f = e[c],
+                            g = f.getAttribute("data-src");
+                        f.setAttribute("src", g), console.debug("image lazy load: ", g)
+                    }
+                };
+            window.yoheim.onloadEvents.push(b)
+        }();
+    </script>
+
+</body>
+
 </html>
